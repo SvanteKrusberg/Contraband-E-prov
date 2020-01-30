@@ -12,6 +12,7 @@ namespace ContraBand
         {
             passengers = generator.Next(1, 5);
             contrabandAmount = generator.Next(1, 5);
+            carType = "ContrabandCar";
         }
 
     }

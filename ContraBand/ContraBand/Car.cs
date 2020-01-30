@@ -8,6 +8,8 @@ namespace ContraBand
 {
     class Car
     {
+        public string carType;
+
         public int passengers;
         public int contrabandAmount;
         public bool alreadyChecked;
@@ -77,6 +79,15 @@ namespace ContraBand
             {
                 return false;
             }
+
+        }
+
+        //en metod bara för att kolla att jag skapar nya bilar rätt och att bilarna blir unika
+        public void PrintStats()
+        {
+            Console.WriteLine("Passengers: " + passengers);
+            Console.WriteLine("Contraband: " + contrabandAmount);
+            Console.WriteLine(carType);
 
         }
 
