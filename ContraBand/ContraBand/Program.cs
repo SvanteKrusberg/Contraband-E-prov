@@ -10,6 +10,13 @@ namespace ContraBand
     {
         static void Main(string[] args)
         {
+
+            List<Car> carList = new List<Car>();
+            Console.WriteLine("Hur många bilar ska skapas?");
+            while
+
+            Console.ReadLine();
+
         }
     }
 }
