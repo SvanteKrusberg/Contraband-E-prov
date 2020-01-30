@@ -8,6 +8,7 @@ namespace ContraBand
 {
     class Utils
     {
+        //Älskar denna generator, det absolut bästa som hänt mig.
         public static Random rng = new Random();
 
     }

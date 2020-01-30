@@ -13,8 +13,12 @@ namespace ContraBand
             bool lyckad = false;
             int amountOfCars = 0;
             string userInput;
+            //Skapar en lista för alla bilar
             List<Car> carList = new List<Car>();
             Console.WriteLine("Hur många bilar ska skapas?");
+
+            //Jag använder .Trim() och .ToLower() för att eliminera risker av att användaren håller på och äcklar sig med
+            //versaler och mellanrum :)
             userInput = Console.ReadLine().Trim();
             lyckad = int.TryParse(userInput, out amountOfCars);
 
@@ -62,8 +66,6 @@ namespace ContraBand
                 //Skapar en cardecider som används senare
                 int carDecider;
 
-                //Jag använder .Trim() och .ToLower() för att eliminera risker av att användaren håller på och äcklar sig med
-                //versaler och mellanrum :)
                 userInput = Console.ReadLine().Trim().ToLower();
 
                 //En if som kollar om användaren skriver in "end" och om den gär det så bryts loopen, en lat lösning jag vet
