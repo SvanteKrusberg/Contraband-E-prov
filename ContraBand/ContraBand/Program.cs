@@ -39,6 +39,8 @@ namespace ContraBand
                 }
             }
 
+            Console.Clear();
+
             //En enkel loop bara för att kolla att de bilar jag skapar är unika med individuella stats
             /*
             for (int i = 0; i < amountOfCars; i++)
@@ -46,8 +48,47 @@ namespace ContraBand
                 carList[i].PrintStats();
             }
             */
+            while (true)
+            {
+                Console.WriteLine("Type 'END' to quit the game.");
+                Console.WriteLine("Vilken bil vill du titta på? [1 - " + carList.Count() + "]");
+                int carDecider;
+                userInput = Console.ReadLine().Trim().ToLower();
+                if (userInput == "end")
+                {
+                    break;
+                }
 
-            Console.WriteLine("Yay" + " " + amountOfCars);
+                else
+                {
+                    bool success = int.TryParse(userInput, out carDecider);
+                    carDecider--;
+                    while (success == false || carDecider < 0 || carDecider >= carList.Count())
+                    {
+                        Console.WriteLine("Pick a correct value!");
+                        userInput = Console.ReadLine().Trim();
+                        success = int.TryParse(userInput, out carDecider);
+                        carDecider--;
+
+                    }
+
+                    if (carList[carDecider].alreadyChecked == true)
+                    {
+                        Console.WriteLine("You've already checked this car!");
+                        Console.ReadLine();
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        carList[carDecider].Examine();
+                        Console.ReadLine();
+                        Console.Clear();
+                    }
+
+                }
+
+            }
+
             Console.ReadLine();
 
         }

@@ -25,10 +25,12 @@ namespace ContraBand
                 {
                     if(chanceToMiss > 10)
                     {
+                        Console.WriteLine("You found nothing.");
                         return false;
                     }
                     else
                     {
+                        Console.WriteLine(contrabandAmount + " Contraband found!");
                         return true;
                     }
 
@@ -37,11 +39,13 @@ namespace ContraBand
                 {
                     if(chanceToMiss > 30)
                     {
+                        Console.WriteLine("You found nothing.");
                         return false;
 
                     }
                     else
                     {
+                        Console.WriteLine(contrabandAmount + " Contraband found!");
                         return true;
                     }
 
@@ -50,11 +54,13 @@ namespace ContraBand
                 {
                     if(chanceToMiss > 50)
                     {
+                        Console.WriteLine("You found nothing.");
                         return false;
 
                     }
                     else
                     {
+                        Console.WriteLine(contrabandAmount + " Contraband found!");
                         return true;
 
                     }
@@ -63,11 +69,13 @@ namespace ContraBand
                 {
                     if (chanceToMiss > 70)
                     {
+                        Console.WriteLine("You found nothing.");
                         return false;
 
                     }
                     else
                     {
+                        Console.WriteLine(contrabandAmount + " Contraband found!");
                         return true;
 
                     }
@@ -77,6 +85,7 @@ namespace ContraBand
             }
             else
             {
+                Console.WriteLine("You found nothing.");
                 return false;
             }
 
